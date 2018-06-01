@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "js-clippy": [
+        "dist/js-clippy"
+      ],
+      "js-clippy/*": [
+        "dist/js-clippy/*"
+      ]
+    }
   }
 }
