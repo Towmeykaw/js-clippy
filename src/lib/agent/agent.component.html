@@ -1,0 +1,6 @@
+<div ngDraggable *ngIf="visible" style="display:grid; grid-row-gap: 8px; width:124px">
+    <app-balloon>
+    </app-balloon>
+    <div class="agent" [id]="agentClass" [style.background-position]="backgroundPosition" (dblclick)="onDoubleClick()">
+    </div>
+</div>
