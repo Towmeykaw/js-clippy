@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "js-clippy": {
+      "root": "projects/js-clippy",
+      "sourceRoot": "projects/js-clippy/src",
+      "projectType": "library",
+      "prefix": "clippy",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/js-clippy/tsconfig.lib.json",
+            "project": "projects/js-clippy/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/js-clippy/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/js-clippy/src/test.ts",
+            "tsConfig": "projects/js-clippy/tsconfig.spec.json",
+            "karmaConfig": "projects/js-clippy/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/js-clippy/tsconfig.lib.json",
+              "projects/js-clippy/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "js-clippy-app"
