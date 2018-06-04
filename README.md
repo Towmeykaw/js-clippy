@@ -1,5 +1,9 @@
 # JsClippy
 This is an angular component that adds clippy or one of his friends to the site. 
+To install run the command
+``` 
+npm install js-clippy
+``` 
 To enable clippy you first need to declare the components and import the AngularDraggableModule that clippy uses to be draggable.
 
 ```
