@@ -26,3 +26,7 @@ The other two methods to know are hide and speak.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+##Thanks 
+A big thanks to Smore for creating the original clippy.js from which this project has borrowed most of its stuff. 
+And of course to the brilliant people who created Clippy.
