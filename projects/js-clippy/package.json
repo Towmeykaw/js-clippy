@@ -1,7 +1,11 @@
 {
   "name": "js-clippy",
   "author": "towmeykaw",
-  "version": "0.0.6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Towmeykaw/js-clippy"
+  },
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",

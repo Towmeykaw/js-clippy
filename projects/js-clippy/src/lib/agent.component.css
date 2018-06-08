@@ -1,7 +1,7 @@
 .agent {
     width: 124px;
     height: 93px;
-    z-index: 1000;
+    z-index: 999999;
     display: grid;
     align-self: center;
     pointer-events: all;
