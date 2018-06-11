@@ -26,3 +26,15 @@ The other two methods to know are hide and speak.
 </button>
 <app-clippy name="Clippy" #clippy></app-clippy>
 ```
+By setting the name property you get a different character. 
+The available characters are: 
+Bonzi
+Clippy
+F1
+Genie
+Genius
+Links
+Merlin
+Peedy
+Rocky
+Rover
