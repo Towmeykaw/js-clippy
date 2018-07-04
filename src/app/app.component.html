@@ -18,11 +18,15 @@
   </li>
   <li>
       <div>
-          <button (click)="clippy.show(true)">
+          <button (click)="show()">
             AddClippy
           </button>
-          <app-clippy name="Clippy" #clippy></app-clippy>
-        </div>
-        
+          <button (click)="talk()">
+            Talk
+          </button>
+          <button (click)="remove()">
+            Remove
+          </button>
+        </div>        
   </li>
 </ul>

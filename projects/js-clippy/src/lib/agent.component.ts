@@ -1,11 +1,10 @@
-import { Component, Inject, ViewChild, Input, OnInit } from '@angular/core';
+import { Component, ViewChild, Input, OnInit } from '@angular/core';
 import {Queue} from './queue';
 import { Animator } from './animator';
 import { Loader } from './loader';
-import { Subscription } from 'rxjs';
 import { BalloonComponent } from './balloon.component';
 import { AnimationStates } from './animationstates';
-
+  
 @Component({
   selector: 'app-clippy',
   templateUrl: './agent.component.html',
@@ -15,7 +14,7 @@ import { AnimationStates } from './animationstates';
 export class AgentComponent implements OnInit {
     @ViewChild(BalloonComponent) balloon;
     @Input() name: string;
-
+    
     public backgroundPosition: string;
     public visible = false;
     public queue: Queue;
@@ -64,6 +63,14 @@ export class AgentComponent implements OnInit {
             }
         });
     }
+    public speak (text, hold): void {
+        this.queue.enqueue((complete) => {
+            if (this.balloon) {
+                this.balloon.speak(complete, text, hold);
+            }
+            complete();
+        });
+    }
     public stop (): void {
         // clear the queue
         this.queue.clear();
@@ -107,14 +114,7 @@ export class AgentComponent implements OnInit {
         const idx = Math.floor(Math.random() * r.length);
         return r[idx];
     }
-    public speak (text, hold): void {
-        this.queue.enqueue((complete) => {
-            if (this.balloon) {
-                this.balloon.speak(complete, text, hold);
-            }
-            complete();
-        });
-    }
+    
     play (animation) {
         if (!this.hasAnimation(animation)) {
             return false;

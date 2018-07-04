@@ -2,20 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AgentComponent, BalloonComponent } from 'projects/js-clippy/src/public_api';
-import { AngularDraggableModule } from 'angular2-draggable';
+import { JsClippyModule } from 'js-clippy';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AgentComponent,
-    BalloonComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AngularDraggableModule
+    JsClippyModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
